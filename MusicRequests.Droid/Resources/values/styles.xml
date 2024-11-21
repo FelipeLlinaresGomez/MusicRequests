@@ -1,0 +1,896 @@
+﻿<resources>
+
+    <!-- Application theme -->
+    <style name="AppTheme" parent="AppTheme.Base">
+			<item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:textCursorDrawable">@null</item>
+		<item name="android:forceDarkAllowed">false</item>
+        <!-- color for widget theming, eg EditText. Doesn't effect ActionBar. -->
+    	<item name="android:popupMenuStyle">@style/PopupMenuTheme</item>
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+	<style name="PopupMenuTheme" parent="@android:style/Widget.PopupMenu">
+   	 	<item name="android:popupBackground">@android:color/white</item>
+	</style>
+
+    <style name="AppTheme.Login" parent="AppTheme.Base">
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.Menu" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/black</item>
+    </style>
+
+    <style name="AppTheme.Splash" parent="AppTheme.Base">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    
+    <style name="SplashTheme" parent="AppTheme.Base">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+    
+    <style name="AppTheme.RouteHub" parent="AppTheme.Base">
+        <item name="android:statusBarColor">@color/ic_blue_button_pressed</item>
+    </style>
+    
+    <style name="RouteHubTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/ic_blue_button_pressed</item>
+        <item name="android:statusBarColor">@color/ic_blue_button_pressed</item>
+    </style>
+
+    <style name="DrawerIconTheme" parent="DrawerIconTheme.Base"/>
+
+    <style name="DrawerIconTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar" >
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="MyCheckboxTheme" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlNormal">@color/ic_blue</item>
+        <item name="android:colorControlActivated">@color/ic_blue</item>
+        <item name="android:colorControlHighlight">@color/ic_blue</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+    </style>
+    
+	<!-- TextView -->
+
+	<!--Text view style for app bar title text view-->
+	<style name="laf_texto_azul_16">
+		<item name="android:textColor">@color/ic_blue</item>
+	 	<item name="android:textSize">16sp</item>
+	</style>
+    
+    <style name="laf_texto_blanco_16">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+	<style name="laf_texto_gris65_14b">
+		<item name="android:textColor">@color/ic_gris65</item>
+		<item name="android:textSize">14sp</item>
+		<item name="customFont">musicRequestsBold</item>
+	</style>
+
+	<style name="laf_texto_negro_18">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">false</item>
+	</style>
+
+	<style name="laf_texto_grisoscuro_18" parent="laf_texto_negro_18">
+		<item name="android:textColor">@color/ic_darker_gray</item>
+	</style>
+
+	<style name="laf_texto_negro_20b">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_medium_big</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="laf_texto_negro_18b">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsBold</item>
+	</style>
+
+	<style name="laf_texto_gris75_15">
+		<item name="android:textColor">@color/ic_gris75</item>
+		<item name="android:textSize">@dimen/text_small</item>
+	</style>
+
+	<style name="laf_texto_gris75_13">
+		<item name="android:textColor">@color/ic_gris75</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+	</style>
+
+	<style name="laf_texto_blanco_18b" parent="laf_texto_gris65_14b">
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="laf_texto_negro_13m" parent="laf_texto_gris65_14b">
+		<item name="android:textSize">@dimen/text_tiny</item>
+		<item name="customFont">musicRequestsMedium</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="laf_texto_negro_13r" parent="laf_texto_gris65_14b">
+		<item name="android:textSize">@dimen/text_tiny</item>
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="laf_texto_azuloscuro_15m">
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="android:textColor">@color/ic_dark_blue</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+  
+	<color name="ic_dark_blue">#0062AE</color>
+
+	<style name="text_white" parent="laf_texto_negro_18">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+	</style>
+
+	<style name="text_tiny_white" parent="laf_texto_negro_18">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+	</style>
+
+	<style name="text_tiny_white_bold" parent="laf_texto_negro_18">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+	</style>
+
+	<style name="text_tinier_white" parent="laf_texto_negro_18">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/text_tinier</item>
+	</style>
+
+	<style name="text_tiny_grey" parent="laf_texto_negro_18">
+		<item name="android:textColor">@color/ic_gris50</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+	</style>
+
+	<style name="text_tiny_black" parent="laf_texto_negro_18">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+	</style>
+
+	<style name="text_tiny_grey_italic" parent="text_tiny_grey">
+		<item name="android:textStyle">italic</item>
+	</style>
+
+	<style name="text_tiny_grey_italic_top_tiny" parent="text_tiny_grey_italic">
+		<item name="android:textStyle">italic</item>
+	</style>
+
+	<style name="laf_texto_gris50_15i">
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsItalic</item>
+		<item name="android:textColor">@color/ic_gris50</item>
+	</style>
+
+    <style name="laf_texto_blanco_15i">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="customFont">musicRequestsItalic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+	<style name="laf_texto_rojo_13m">
+		<item name="android:textColor">@color/ic_red</item>
+		<item name="android:textSize">13sp</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+	
+	<style name="laf_texto_rojo_15">
+		<item name="android:textColor">@color/ic_red</item>
+		<item name="android:textSize">@dimen/text_small</item>
+	</style>
+
+	<style name="laf_texto_rojo_15m">
+		<item name="android:textColor">@color/ic_red</item>
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_gris50_15">
+		<item name="android:textColor">@color/ic_gris50</item>
+		<item name="android:textSize">@dimen/text_small</item>
+	</style>
+
+	<style name="laf_texto_blanco_12">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:textAllCaps">false</item>
+	</style>
+
+	<style name="laf_texto_azul_18r">
+		<item name="android:textColor">@color/ic_blue</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">true</item>
+	</style>  
+
+	<!-- Buttons -->
+
+	<!--Boton azul estilo cuadrado -->
+	<style name="laf_botonCuadrado_azul_12m">
+		<item name="android:maxWidth">320dp</item>
+		<item name="android:background">@drawable/laf_fondo_azul_gris_selector</item>
+		<item name="android:textColor">@drawable/laf_texto_negro_blanco_selector</item>
+		<item name="customFont">musicRequestsMedium</item>
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">12sp</item>
+	</style>
+
+	<!--Boton transparente borde negro estilo cuadrado -->
+	<style name="laf_botonCuadrado_transparenteNegro_12m">
+		<item name="android:maxWidth">320dp</item>
+		<item name="android:background">@drawable/laf_fondotransparente_bordenegro_rect</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="customFont">musicRequestsMedium</item>
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">12sp</item>
+	</style>
+
+	<!--Blue button style-->
+    <style name="ic_blue_btn">
+        <item name="android:background">@drawable/blue_btn_selector</item>
+        <item name="android:textColor">@drawable/blue_btn_text_color_selector</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+	    <item name="android:textAllCaps">true</item>
+        <item name="textAllCaps">true</item>
+	    <item name="customFont">musicRequestsBold</item>
+    </style>
+
+	<!--Blue button rounded border style-->
+	<style name="ic_blue_rounded_btn">
+		<item name="android:background">@drawable/blue_rounded_btn_selector</item>
+		<item name="android:textColor">@drawable/blue_rounded_btn_text_color_selector</item>
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">true</item>        
+		<item name="customFont">musicRequestsBold</item>
+	</style>
+
+	<!--LAF Blue button style-->
+    <style name="laf_boton_azul_18m">
+        <item name="android:background">@drawable/blue_btn_selector</item>
+        <item name="android:textColor">@drawable/blue_btn_text_color_selector</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+	    <item name="android:textAllCaps">true</item>
+        <item name="textAllCaps">true</item>
+	    <item name="android:textColor">@color/ic_blue</item>   
+		<item name="customFont">musicRequestsMedium</item>		
+    </style>
+
+    <!--Blue button style. with lower case letter-->
+    <style name="ic_blue_lower_btn" parent="ic_blue_btn">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ic_teal_btn">
+        <item name="android:background">@drawable/teal_btn_selector</item>
+        <item name="android:textColor">@drawable/blue_btn_text_color_selector</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="textAllCaps">true</item>
+        <item name="customFont">musicRequestsBold</item>
+    </style>
+
+	<!--White button style-->
+	<style name="ic_white_btn">
+		<item name="android:background">@drawable/white_btn_selector</item>
+		<item name="android:textColor">@color/ic_blue</item>
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">true</item>
+		<item name="customFont">musicRequestsBold</item>
+	</style>
+
+	<!--LAF White button style-->
+	<style name="laf_ic_white_btn">
+		<item name="android:background">@drawable/white_btn_selector</item>
+		<item name="android:textColor">@color/ic_blue</item>
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">true</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<!--White button style heavy-->
+	<style name="ic_white_btn_heavy">
+		<item name="android:background">@drawable/white_btn_selector</item>
+		<item name="android:textColor">@color/ic_blue</item>
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">true</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<!-- Link button -->
+	<style name="link_button">
+		<item name="android:textColor">@color/ic_blue</item>
+		<item name="android:background">@color/transparent</item>
+		<item name="android:gravity">bottom|center_horizontal</item>
+		<item name="customFont">musicRequestsMedium</item>
+		<item name="android:textAllCaps">false</item>
+	</style>
+
+	<style name="link_button_white">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:background">@color/transparent</item>
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<!-- EditText -->
+	<!-- Edit Text Login -->
+	<style name="edit_text_login" parent="laf_texto_negro_18">
+		<item name="android:background">@drawable/text_box_login</item>
+		<item name="android:drawablePadding">@dimen/margin_tiny</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:singleLine">true</item>
+	</style>	
+
+	<style name="text_box_gris" parent="laf_texto_negro_18">
+		<item name="android:background">@drawable/text_box_gris</item>
+		<item name="android:drawablePadding">@dimen/margin_tiny</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:singleLine">true</item>
+	</style>
+
+	<style name="text_box" parent="laf_texto_negro_18">
+		<item name="android:drawablePadding">@dimen/margin_tiny</item>
+		<item name="android:textSize">18sp</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:singleLine">true</item>
+	</style>
+
+	<!-- Edit text transparent & white rect style-->
+	<style name="laf_edit_text_transparent_white_rect">
+		<item name="android:maxWidth">320dp</item>
+		<item name="android:background">@drawable/transparent_white_border_rect</item>
+		<item name="android:textColor">@color/ic_white</item>		
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">13sp</item>
+	</style>
+
+     <!-- Edit text transparent & blue rect style-->
+	<style name="laf_edit_text_transparent_blue_rect">
+		<item name="android:maxWidth">320dp</item>
+		<item name="android:background">@drawable/transparent_blue_border_rect</item>
+		<item name="android:textColor">@color/black</item>		
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">13sp</item>
+	</style>
+
+	 <!-- Edit text transparent & black rect style-->
+	<style name="laf_edit_text_transparent_black_rect">
+		<item name="android:maxWidth">320dp</item>
+		<item name="android:background">@drawable/transparent_black_border_rect</item>
+		<item name="android:textColor">@color/black</item>		
+		<item name="android:minHeight">48dp</item>
+		<item name="android:textSize">13sp</item>
+	</style>
+
+	<!-- Views -->
+	<!-- Gray line -->
+	<style name="gray_line">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">1dp</item>
+		<item name="android:background">@color/ic_gris25</item>
+	</style>
+
+	<!-- Badge -->
+	<style name="ic_red_badge_style">
+		<item name="android:paddingLeft">3dp</item>
+		<item name="android:paddingRight">3dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">10sp</item>
+		<item name="android:background">@drawable/badge</item>
+		<item name="android:maxHeight">16dp</item>
+		<item name="android:minWidth">16dp</item>
+		<item name="android:gravity">center</item>
+	</style>
+  
+	<!-- Spinner -->
+	<style name="CustomSpinnerTheme" parent="android:Widget.Spinner">
+		<item name="android:background">@drawable/custom_spinner</item>
+	</style>
+
+	<!-- Spinner Bizum-->
+	<style name="CustomBizumSpinnerTheme" parent="android:Widget.Spinner">
+		<item name="android:background">@drawable/custom_bizum_spinner</item>
+	</style>
+
+	<style name="laf_texto_blanco_20b" parent="text_white">
+		<item name="android:textSize">@dimen/text_medium_big</item>
+		<item name="customFont">musicRequestsBold</item>
+	</style>
+
+	<style name="laf_texto_azuloscuro_20b">
+		<item name="android:textSize">@dimen/text_medium_big</item>
+		<item name="customFont">musicRequestsBold</item>
+		<item name="android:textColor">@color/ic_dark_blue</item>
+	</style>
+
+	<style name="laf_texto_azuloscuro_24m">
+		<item name="android:textSize">@dimen/text_medium_extra</item>
+		<item name="customFont">musicRequestsMedium</item>
+		<item name="android:textColor">@color/ic_dark_blue</item>
+	</style>
+
+	<style name="laf_texto_blanco_14m" parent="text_white">
+		<item name="android:textSize">@dimen/text_timy_small</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_blanco_14r" parent="text_white">
+		<item name="android:textSize">@dimen/text_timy_small</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<style name="laf_texto_blanco55alpha_15i" parent="text_white">
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsItalic</item>
+		<item name="android:alpha">0.55</item>
+	</style>
+
+	<style name="laf_texto_blanco55alpha_13m" parent="text_white">
+		<item name="android:textSize">@dimen/text_tiny</item>
+		<item name="customFont">musicRequestsMedium</item>
+		<item name="android:alpha">0.55</item>
+	</style>
+
+	<style name="laf_texto_blanco55alpha_18r" parent="text_white">
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:alpha">0.55</item>
+	</style>
+
+	<style name="laf_texto_blanco85alpha_15r" parent="text_white">
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:alpha">0.85</item>
+	</style>
+
+    <style name="laf_texto_blanco85alpha_18r" parent="text_white">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="customFont">musicRequestsRegular</item>
+        <item name="android:alpha">0.85</item>
+    </style>
+
+	<style name="laf_texto_14m">
+		<item name="android:textSize">@dimen/text_timy_small</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_negro_18m">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_negro_18r">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<style name="laf_texto_negro_20m">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_medium_big</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_negro_16m">
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_large</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_azulclaro_20m" >		
+		<item name="android:textColor">@color/lightBlueGrey</item>
+		<item name="android:textSize">@dimen/text_medium_big</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_azulclaro_15b" >        
+        <item name="android:textColor">@color/lightBlueGrey</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="customFont">musicRequestsBold</item>
+    </style>
+
+	<style name="laf_texto_azulclaro_18m" >        
+        <item name="android:textColor">@color/lightBlueGrey</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="customFont">musicRequestsMedium</item>
+    </style>
+
+	<style name="laf_texto_azulclaro_15r" >        
+        <item name="android:textColor">@color/lightBlueGrey</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="customFont">musicRequestsRegular</item>
+    </style>
+
+	<style name="laf_texto_azulclaro_18r" >        
+        <item name="android:textColor">@color/lightBlueGrey</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="customFont">musicRequestsRegular</item>
+    </style>
+
+    <style name="laf_texto_azul_15m" >        
+        <item name="android:textColor">@color/ic_blue</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="customFont">musicRequestsMedium</item>
+    </style>
+
+	<style name="laf_texto_azul_32r">
+		<item name="android:textColor">@color/ic_blue</item>
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:textSize">@dimen/text_extra_big</item>
+	</style>
+
+	<style name="laf_texto_gris50_18m" >		
+		<item name="android:textColor">@color/ic_gris50</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_blanco_24m" parent="text_white">		
+		<item name="android:textSize">@dimen/text_medium_extra</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_blanco_15r" parent="text_white">		
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+    
+    <style name="laf_texto_naranja_15r" parent="laf_texto_blanco_15r">
+        <item name="android:textColor">@color/ic_dark_orange</item>
+    </style>
+
+	<style name="laf_texto_naranja_15m" parent="laf_texto_blanco_15r">
+		<item name="android:textColor">@color/ic_dark_orange</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_naranja_14m" parent="laf_texto_blanco_14m">
+		<item name="android:textColor">@color/ic_orange_info</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_blanco_30r" parent="text_white">
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:textSize">@dimen/text_big</item>
+	</style>
+
+	<style name="laf_texto_blanco_44r" parent="text_white">
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:textSize">@dimen/text_extra_large</item>
+	</style>
+
+	<style name="laf_texto_blanco_13r" parent="text_white">
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+	</style>
+
+	<style name="laf_texto_blanco_56r" parent="text_white">
+		<item name="customFont">musicRequestsRegular</item>
+		<item name="android:textSize">@dimen/text_very_huge</item>
+	</style>
+
+	<style name="laf_texto_blanco_16i" parent="text_white">		
+		<item name="android:textSize">@dimen/text_large</item>
+		<item name="customFont">musicRequestsItalic</item>		
+	</style>
+
+	<!--Detalle Movimiento Bizum-->
+	<style name="laf_texto_gris50_13m">
+		<item name="android:textColor">@color/ic_gris50</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<!--Configuracion Bizum-->
+	<style name="laf_texto_gris50_15r" >
+		<item name="android:textColor">@color/ic_gris50</item>
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<style name="laf_texto_gris50_15m">
+		<item name="android:textColor">@color/ic_gris50</item>
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<style name="laf_texto_negro_20r" parent="laf_texto_negro_18">
+		<item name="android:textSize">@dimen/text_medium_big</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<style name="laf_texto_blanco_20r" parent="laf_texto_blanco_12">
+		<item name="android:textSize">@dimen/text_medium_big</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<style name="laf_texto_gris50_13r">
+		<item name="android:textColor">@color/ic_gris50</item>
+		<item name="android:textSize">@dimen/text_tiny</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+    <style name="laf_texto_gris50_13i">
+		<item name="android:textSize">@dimen/text_tiny</item>
+        <item name="android:textColor">@color/ic_gris50</item>
+        <item name="customFont">musicRequestsItalic</item>
+	</style>
+
+	<style name="laf_texto_gris_14m">
+		<item name="android:drawablePadding">@dimen/text_small</item>
+		<item name="android:textSize">14sp</item>
+	    <item name="android:textColor">@color/ic_gris50</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	 <style name="laf_texto_azul_13m">		
+		<item name="android:textSize">@dimen/text_tiny</item>
+		<item name="customFont">musicRequestsMedium</item>
+	    <item name="android:textColor">@color/ic_blue</item>
+	</style>
+
+	 <style name="laf_texto_gris_15m">		
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="customFont">musicRequestsMedium</item>
+	    <item name="android:textColor">@color/ic_gris50</item>
+	</style>
+
+	<style name="laf_texto_negro_15b" >        
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="customFont">musicRequestsMedium</item>
+    </style>
+
+	<style name="laf_texto_azul_15b" >        
+        <item name="android:textColor">@color/ic_blue</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="customFont">musicRequestsBold</item>
+    </style>
+
+	<style name="laf_texto_negro_10m" >        
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_tiny</item>
+        <item name="customFont">musicRequestsMedium</item>
+    </style>
+	
+    <!--Black content text style-->
+    <style name="laf_texto_12r">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="customFont">musicRequestsRegular</item>
+    </style>
+    
+    <style name="laf_texto_azul_12r" parent="laf_texto_12r">
+        <item name="android:textColor">@color/ic_blue</item>
+    </style>
+    
+     <!--White content text style-->
+    <style name="laf_texto_blanco_12r" parent="@style/laf_texto_12r">
+        <item name="android:textColor">@color/white</item>
+    </style>
+	
+	<!--Gray subtitle style-->
+    <style name="laf_texto_gris_12r">
+        <item name="android:textColor">@color/ic_subtitle_gray_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="customFont">musicRequestsRegular</item>
+    </style>
+
+	 <style name="laf_texto_gris_16r">
+        <item name="android:textColor">@color/ic_subtitle_gray_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="customFont">musicRequestsRegular</item>
+    </style>
+	
+	<!--Gray small subtitle style-->
+    <style name="laf_texto_gris_10r" parent="@style/laf_texto_gris_12r">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+	<style name="laf_texto_negro_12r" parent="@style/laf_texto_12r">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <!--Style SCA-->
+    <style name="edit_text_sca" parent="laf_texto_negro_12r">
+        <item name="android:background">@drawable/text_box_sca</item>
+        <item name="android:drawablePadding">@dimen/margin_tiny</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+	<!--Home Resume Card Container style-->
+	<style name="home_resume_cardview_style">
+		<item name="cardCornerRadius">10dp</item>
+		<item name="cardUseCompatPadding">true</item>
+		<item name="android:layout_marginTop">@dimen/margin_super_tiny</item>
+		<item name="android:layout_marginLeft">@dimen/margin_small_new</item>
+		<item name="android:layout_marginRight">@dimen/margin_small_new</item>
+		<item name="android:layout_marginBottom">@dimen/margin_super_tiny</item>
+	</style>
+	
+	
+
+	<!--Textos Azules-->
+	<!--Titulo azul texto14r-->
+	<style name="laf_texto_azul_14r">
+		<item name="android:textColor">@color/ic_blue</item>
+		<item name="android:textSize">14sp</item>
+		 <item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<!--laf texto bold 14 azul-->
+	<style name="laf_texto_azul_14b">
+		<item name="android:textColor">@color/ic_blue_new</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsBold</item>
+	</style>
+
+	<!--laf texto bold 14 dark azul-->
+	<style name="laf_texto_dark_azul_14b">
+		<item name="android:textColor">@color/ic_dark_blue</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsBold</item>
+	</style>
+
+	<!--laf texto azul medium 14m-->
+	<style name="laf_texto_azul_14m">
+		<item name="android:textColor">@color/ic_blue_new</item>
+		<item name="android:textSize">14sp</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<!--laf texto azul medium 16m-->
+	<style name="laf_texto_azul_16m">
+		<item name="android:textColor">@color/ic_blue_new</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+	<!--laf texto bold 20 azul-->
+	<style name="laf_texto_azul_20b">
+		<item name="android:textColor">@color/ic_blue_new</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsBold</item>
+	</style>	
+
+	<!--Textos Blancos-->
+	<!--laf texto blanco medium 16m-->
+	<style name="laf_texto_blanco_16m">
+		<item name="android:textColor">@color/ic_white</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<!--laf texto blanco medium 12m-->
+	<style name="laf_texto_blanco_12m">
+		<item name="android:textColor">@color/ic_white</item>
+		<item name="android:textSize">12sp</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<!--laf texto medium 20 blanco-->
+	<style name="laf_texto_blanco_20m">
+		<item name="android:textColor">@color/ic_white</item>
+		<item name="android:textSize">18sp</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+	<!--laf texto blanco medium 18m-->
+	<style name="laf_texto_blanco_18m">
+		<item name="android:textColor">@color/ic_white</item>
+		<item name="android:textSize">18sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsMedium</item>
+	</style>
+
+	<!--laf texto blanco regular 18 -->
+	<style name="laf_texto_blanco_18r">
+		<item name="android:textColor">@color/ic_white</item>
+		<item name="android:textSize">18sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+	
+	<!--Textos negros-->
+	<!--laf texto light 16 negro-->
+	<style name="laf_texto_negro_16l">
+		<item name="android:textColor">@color/ic_gris75</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="customFont">musicRequestsExtraBold</item>
+	</style>
+
+	<!--laf texto regular 14 negro-->
+	<style name="laf_texto_negro_14r">
+		<item name="android:textColor">@color/ic_gris90</item>
+		<item name="android:textSize">14sp</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+	<!--Textos gris-->
+	<!--laf texto regular 14 gris-->
+	<style name="laf_texto_gris_14r">
+		<item name="android:textColor">@color/ic_gris75</item>
+		<item name="android:textSize">14sp</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<!--Textos Rojos-->
+	<!--laf texto rojo regular texto14r-->
+	<style name="laf_texto_rojo_14r">
+		<item name="android:textColor">@color/ic_red</item>
+		<item name="android:textSize">14sp</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<!--laf texto rojo regular texto12r-->
+	<style name="laf_texto_rojo_12r">
+		<item name="android:textColor">@color/ic_red</item>
+		<item name="android:textSize">12sp</item>
+		<item name="customFont">musicRequestsRegular</item>
+	</style>
+
+	<!-- Separator gris -->
+	<style name="laf_separator_gris">
+		<item name="android:background">@color/ic_gris25</item>
+	</style>
+
+	<!-- Switch -->
+	<style name="laf_Switch">
+		<item name="android:padding">@dimen/margin_small_new</item>
+		<item name="android:thumb">@drawable/laf_thumb_selector</item>
+		<item name="android:track">@drawable/laf_track_selector</item>
+	</style>
+
+</resources>

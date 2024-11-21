@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="9.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.Json" Version="9.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.JsonLocalization" Version="9.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="9.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.ResourceLoader" Version="9.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="MvvmCross.Plugin.Visibility" Version="9.2.0" />
+    <PackageReference Include="Acr.UserDialogs" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MusicRequests.Core.Models\MusicRequests.Core.Models.csproj" />
+    <ProjectReference Include="..\MusicRequests.Core.Services\MusicRequests.Core.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\DeviceSecurityCheck\" />
+    <None Remove="Navigation\" />
+    <None Remove="AppManagers\Base\" />
+    <None Remove="Services\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApiManagers\BizumEntreParticulares\" />
+    <Folder Include="Services\DeviceSecurityCheck\" />
+    <Folder Include="Navigation\" />
+    <Folder Include="AppManagers\Base\" />
+    <Folder Include="Services\Base\" />
+  </ItemGroup>
+</Project>

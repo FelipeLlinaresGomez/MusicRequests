@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ivFondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@color/ic_blue"
+        android:src="@drawable/fondo_login_16_9"/>
+    <!-- Dummy item to prevent EditTexts from receiving focus -->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        local:MvxBind="Visibility InvertedVisibility(IsBusy)">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="@dimen/margin_largest"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_menu_burger"
+                android:tint="@color/white" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Visibility InvertedVisibility(IsBusySplash)">
+                <!-- Nombre usuario -->               
+                 <MusicRequests.Droid.CustomViews.CustomEditText
+                     android:id="@+id/etUsuarioParticular"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:paddingLeft="6dp"
+                        android:drawablePadding="6dp"
+                        android:drawableLeft="@drawable/ic_icon_user_disabled"
+                        android:drawableTint="@color/white"
+			            style="@style/laf_edit_text_transparent_white_rect"
+                        android:maxLines="1"
+			            android:inputType="text"
+                        android:textColorHint="@color/white"
+			            local:MvxLang="Hint UsuarioHint"
+			            local:MvxBind="Text Usuario"/>                                                 
+                <!-- Contraseña -->                          
+                 <MusicRequests.Droid.CustomViews.CustomEditText
+                    android:id="@+id/inputPassword"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:drawablePadding="6dp"
+                    android:drawableLeft="@drawable/ic_icon_key_disabled"                  
+                    android:drawableTint="@color/white"
+			        style="@style/laf_edit_text_transparent_white_rect"			        		      
+			        android:inputType="textPassword"
+                    android:textColorHint="@color/white"
+                    local:passwordToggleDrawable="@drawable/login_showpassword"
+                    local:passwordToggleEnabled="true"
+                    local:passwordToggleTint="@color/white"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    local:showPasswordVisible="true"
+			        local:MvxLang="Hint ContraseñaHint"
+			        local:MvxBind="Text Contraseña;"/>
+                <!-- Recordar usuario -->
+                <LinearLayout
+                    android:id="@+id/recordarUsuarioView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/swRememberUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="@color/white"
+                        android:button="@drawable/checkbox_white"
+                        local:MvxBind="Checked RememberUser" />
+                    <MusicRequests.Droid.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        style="@style/laf_texto_blanco_12r"
+                        local:MvxLang="Text UsuarioRecordado" />
+                    <MusicRequests.Droid.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:layout_gravity="center|right"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        style="@style/laf_texto_blanco_12r"
+                        local:MvxLang="Text RecordarUsuario"
+                        local:MvxBind="Click RecordarUsuarioCommand"/>
+                </LinearLayout>
+            <!-- Boton Acceder -->
+                <MusicRequests.Droid.CustomButton
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    local:customFont="musicRequestsBold"
+                    local:MvxLang="Text IniciarSesion"
+                    local:MvxBind="Click IniciarSesionCommand;"
+                    style="@style/ic_teal_btn" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- Botones ayuda -->
+    <!-- Is busy -->
+    <include
+        layout="@layout/login_loading_vamos_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

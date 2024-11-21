@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<!-- General colors -->
+	<color name="colorPrimary">@color/white</color>
+	<color name="colorPrimaryDark">@color/ic_dark_blue</color>
+	<color name="colorAccent">@color/ic_blue</color>
+	<color name="accent">@color/ic_blue</color>
+
+	<color name="ic_red">#E52727</color>
+	<color name="ic_orange">#D8AA0B</color>
+	<color name="ic_blue">#0170C4</color>
+	<color name="ic_white">#ffffff</color>
+	<color name="ic_light_blue">#4394D2</color>
+	<color name="ic_green">#0EC920</color>
+	<color name="ic_dark_blue">#0062AE</color>
+	<color name="ic_btn_blue">#0062AD</color>
+	<color name="ic_blue_menu">#0058a9</color>
+	<color name="ic_screen_blue">#0070C3</color>
+	<color name="ic_subtitle_gray_color">#7F7F7F</color>
+	<color name="ic_teal">#7dbcd2</color>
+
+	<color name="ic_darker_gray">#404040</color>
+	<color name="greyishBrown">#404040</color>
+
+	<color name="ic_dark_orange">#ffa200</color>
+	<color name="yellowishOrange">#FFB011</color>
+	<color name="ic_atencion_orange">#f7b000</color>
+	<color name="ic_orange_info">#E9951C</color>
+
+	<color name="greenApple">#43C714</color>
+
+	<color name="white">#FFFFFF</color>
+	<color name="black">#404040</color>
+	<color name="spinner_bg_color">#D9D9D9</color>
+	<color name="transparent">@android:color/transparent</color>
+	<color name="azul_agenda_selected">#190b7ad0</color>
+
+	<!--Grises-->
+	<color name="ic_gris90">#33393e</color>
+	<color name="ic_gris75">#777777</color>
+	<color name="ic_gris65">#595959</color>
+	<color name="ic_gris50">#7F7F7F</color>
+	<color name="ic_gris35">#A6A6A6</color>
+	<color name="ic_gris25">#D9D9D9</color>
+	<color name="ic_gris_10">#F0F0F0</color>
+	<!--<color name="ic_gris15">#D9D9D9</color>
+    <color name="ic_gris5">#F2F2F2</color>-->
+	<color name="ic_gris4">#F3F3F3</color>
+	<color name="ic_gris2">#E5E5E5</color>
+	<color name="ic_grisOverlay">#252526</color>
+	<color name="ic_grisMenu">#F7F7F7</color>
+	<color name="ic_grisFooterMenu">#dadada</color>
+
+	<color name="lightBlueGrey">#DBEBF6</color>
+	<color name="pinkishGrey">#BFBFBF</color>
+	<color name="ic_gris50_transparent">#B3666666</color>
+
+	<!--Primary button colors-->
+	<color name="ic_blue_button_pressed">@color/ic_dark_blue</color>
+	<color name="ic_blue_button_disabled">@color/ic_gris25</color>
+	<!--Secondary button colors-->
+	<color name="ic_secondary_button_pressed">#004A82</color>
+	<color name="ic_secondary_button_disabled">#A6A6A6</color>
+
+	<color name="ic_content_background_color">@color/ic_gris2</color>
+
+	<color name="blue_border_button_disabled_fill_color">#FCFCFC</color>
+	<color name="blue_border_button_disabled_border_color">@color/ic_gris25</color>
+	<color name="blue_border_button_disabled_text_color">@color/ic_gris25</color>
+
+	<!--Separator-->
+	<color name="separator_gray">@color/gray_rect_color</color>
+	<color name="separator_dark_gray">#DCDCDC</color>
+
+	<color name="ic_ammount_total_color">@color/ic_gris75</color>
+	<color name="ic_ammount_total_expense_color">@color/black</color>
+	<color name="ic_ammount_expense_color">@color/ic_red</color>
+	<color name="ic_ammount_income_color">@color/ic_blue</color>
+
+	<color name="loading_view_bg_color">#F2F2F2</color>
+
+	<color name="default_circle_indicator_page_color">#003344</color>
+	<color name="default_circle_indicator_fill_color">#0000FF</color>
+	<color name="default_circle_indicator_stroke_color">#5A6570</color>
+
+	<color name="gray_rect_color">@color/ic_gris2</color>
+
+	<color name="movimiento_circle_date_color">@color/ic_gris75</color>
+	<color name="indicador_riesgo_color">#bdbdbd</color>
+	<color name="indicador_riesgo_format_color">#000000</color>
+
+	<color name="whiteThree">#F9F9F9</color>
+	<color name="greyishBrownTwo">#4A4A4A</color>
+
+	<color name="gdpr_link">#3EB7EC</color>
+
+	<!-- Nuevo azul-->
+	<color name="ic_blue_new">#0B7AD0</color>
+	<color name="ic_blue_bg">#F4F7FD</color>
+
+	<!--Muro-->
+	<color name="ic_light_blue_muro">#e6f1fa</color>
+	<color name="ic_light_orange_muro">#FEF6EB</color>
+
+	<!--PopUp-->
+	<color name="ic_black_transparent">#9900001A</color>
+</resources>

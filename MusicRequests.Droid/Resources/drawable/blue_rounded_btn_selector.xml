@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_enabled="false">
+		<shape android:shape="rectangle">
+			<corners android:radius="45dp" />
+			<solid android:color="@color/ic_blue_button_disabled" />
+		</shape>
+	</item>
+	<item android:state_pressed="true">
+		<shape android:shape="rectangle">
+			<corners android:radius="45dp" />
+			<solid android:color="@color/ic_blue_button_pressed" />
+		</shape>
+	</item>
+	<item>
+		<shape android:shape="rectangle">
+			<corners android:radius="45dp" />
+			<solid android:color="@color/ic_blue" />
+		</shape>
+	</item>
+</selector>

@@ -1,0 +1,294 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-ios</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+    <Configurations>Debug;Release;Store</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+    <CodesignProvision>Automatic</CodesignProvision>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+    <Optimize>true</Optimize>
+    <CodesignProvision>Automatic</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Store|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="8.0.1">
+    </PackageReference>
+    <PackageReference Include="MvvmCross" Version="9.2.0">
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Json" Version="9.2.0">
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.JsonLocalization" Version="9.2.0">
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="9.2.0">
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.ResourceLoader" Version="9.2.0">
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Visibility" Version="9.2.0">
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3">
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.15">
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media" Version="6.0.2">
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="3.1.1">
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0">
+    </PackageReference>
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0">
+    </PackageReference>
+    <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.6" />
+    <PackageReference Include="ZXing.Net" Version="0.16.9" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="Lottie.iOS" Version="4.5.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MusicRequests.Core\MusicRequests.Core.csproj">
+    </ProjectReference>
+    <ProjectReference Include="..\MusicRequests.Core.Models\MusicRequests.Core.Models.csproj">
+    </ProjectReference>
+    <ProjectReference Include="..\MusicRequests.Core.Services\MusicRequests.Core.Services.csproj">
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MusicRequests.Core\TextResources\Text\LoginViewModel.json">
+      <Link>TextResources\Text\LoginViewModel.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\MusicRequests.Core\TextResources\Text\HomeViewModel.json">
+      <Link>TextResources\Text\HomeViewModel.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\MusicRequests.Core\TextResources\Text\Shared.json">
+      <Link>TextResources\Text\Shared.json</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+        <ImageAsset Update="Media.xcassets\AppIcons.appiconset\Icon-Small-50%402x.png">
+      <Link>Media.xcassets\AppIcons.appiconset\Icon-Small-50%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\AppIcons.appiconset\Icon-72%402x.png">
+      <Link>Media.xcassets\AppIcons.appiconset\Icon-72%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\AppIcons.appiconset\Icon%402x.png">
+      <Link>Media.xcassets\AppIcons.appiconset\Icon%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_search.imageset\icon_search%403x.png">
+      <Link>Media.xcassets\icon_search.imageset\icon_search%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_search.imageset\icon_search%402x.png">
+      <Link>Media.xcassets\icon_search.imageset\icon_search%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_aviso_legal.imageset\icon_aviso_legal%403x.png">
+      <Link>Media.xcassets\ic_aviso_legal.imageset\icon_aviso_legal%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_aviso_legal.imageset\icon_aviso_legal%402x.png">
+      <Link>Media.xcassets\ic_aviso_legal.imageset\icon_aviso_legal%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Home - GoogleWalletIcon.imageset\Home - GoogleWalletIcon%403x.png">
+      <Link>Media.xcassets\Home - GoogleWalletIcon.imageset\Home - GoogleWalletIcon%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Home - GoogleWalletIcon.imageset\Home - GoogleWalletIcon%402x.png">
+      <Link>Media.xcassets\Home - GoogleWalletIcon.imageset\Home - GoogleWalletIcon%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ApplePay.imageset\icon_apple_pay%402x.png">
+      <Link>Media.xcassets\ApplePay.imageset\icon_apple_pay%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ApplePay.imageset\icon_apple_pay%403x.png">
+      <Link>Media.xcassets\ApplePay.imageset\icon_apple_pay%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Icon_face_id.imageset\icon_face_id%402.png">
+      <Link>Media.xcassets\Icon_face_id.imageset\icon_face_id%402.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_atencion.imageset\ic_atencion%403x.png">
+      <Link>Media.xcassets\ic_atencion.imageset\ic_atencion%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_atencion.imageset\ic_atencion%402x.png">
+      <Link>Media.xcassets\ic_atencion.imageset\ic_atencion%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ico_check.imageset\ico_check%402x.png">
+      <Link>Media.xcassets\ico_check.imageset\ico_check%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ico_check.imageset\ico_check%403x.png">
+      <Link>Media.xcassets\ico_check.imageset\ico_check%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\GAllery.imageset\Gallery%403x.png">
+      <Link>Media.xcassets\GAllery.imageset\Gallery%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\GAllery.imageset\Gallery%402x.png">
+      <Link>Media.xcassets\GAllery.imageset\Gallery%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_calendar.imageset\icon_calendar%403x.png">
+      <Link>Media.xcassets\ic_calendar.imageset\icon_calendar%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_calendar.imageset\icon_calendar%402x.png">
+      <Link>Media.xcassets\ic_calendar.imageset\icon_calendar%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_cerrar_sesion.imageset\icon_cerrar_sesion%402x.png">
+      <Link>Media.xcassets\icon_cerrar_sesion.imageset\icon_cerrar_sesion%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_cerrar_sesion.imageset\icon_cerrar_sesion%403x.png">
+      <Link>Media.xcassets\icon_cerrar_sesion.imageset\icon_cerrar_sesion%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\More.imageset\MoreInfo%403x.png">
+      <Link>Media.xcassets\More.imageset\MoreInfo%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\More.imageset\MoreInfo%402x.png">
+      <Link>Media.xcassets\More.imageset\MoreInfo%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_qr.imageset\icon_qr%402x.png">
+      <Link>Media.xcassets\icon_qr.imageset\icon_qr%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_qr.imageset\icon_qr%403x-1.png">
+      <Link>Media.xcassets\icon_qr.imageset\icon_qr%403x-1.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Social_icon_facebook.imageset\icon_facebook%402x.png">
+      <Link>Media.xcassets\Social_icon_facebook.imageset\icon_facebook%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Social_icon_facebook.imageset\icon_facebook%403x.png">
+      <Link>Media.xcassets\Social_icon_facebook.imageset\icon_facebook%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Menu.imageset\menu%402x.png">
+      <Link>Media.xcassets\Menu.imageset\menu%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Menu.imageset\menu%403x.png">
+      <Link>Media.xcassets\Menu.imageset\menu%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_contacto.imageset\icon_contacto%402x.png">
+      <Link>Media.xcassets\icon_contacto.imageset\icon_contacto%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_contacto.imageset\icon_contacto%403x.png">
+      <Link>Media.xcassets\icon_contacto.imageset\icon_contacto%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\configuracion.imageset\configuracion%402x-1.png">
+      <Link>Media.xcassets\configuracion.imageset\configuracion%402x-1.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\configuracion.imageset\configuracion%403x.png">
+      <Link>Media.xcassets\configuracion.imageset\configuracion%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Phone_movile.imageset\Mobile%402x.png">
+      <Link>Media.xcassets\Phone_movile.imageset\Mobile%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Phone_movile.imageset\Mobile%403x.png">
+      <Link>Media.xcassets\Phone_movile.imageset\Mobile%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Home - SamsungIcon.imageset\Home - SamsungIcon%402x.png">
+      <Link>Media.xcassets\Home - SamsungIcon.imageset\Home - SamsungIcon%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Home - SamsungIcon.imageset\Home - SamsungIcon%403x.png">
+      <Link>Media.xcassets\Home - SamsungIcon.imageset\Home - SamsungIcon%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_proteccion_datos.imageset\shape%403x.png">
+      <Link>Media.xcassets\ic_proteccion_datos.imageset\shape%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\ic_proteccion_datos.imageset\shape%402x.png">
+      <Link>Media.xcassets\ic_proteccion_datos.imageset\shape%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Help.imageset\Help%403x.png">
+      <Link>Media.xcassets\Help.imageset\Help%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Help.imageset\Help%402x.png">
+      <Link>Media.xcassets\Help.imageset\Help%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\refresh_blue.imageset\refresh_blue%401x.png">
+      <Link>Media.xcassets\refresh_blue.imageset\refresh_blue%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\refresh_blue.imageset\refresh_blue%402x.png">
+      <Link>Media.xcassets\refresh_blue.imageset\refresh_blue%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\refresh_blue.imageset\refresh_blue%403x.png">
+      <Link>Media.xcassets\refresh_blue.imageset\refresh_blue%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Minus.imageset\Minus%403x.png">
+      <Link>Media.xcassets\Minus.imageset\Minus%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Minus.imageset\Minus%402x.png">
+      <Link>Media.xcassets\Minus.imageset\Minus%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_agenda_telefono.imageset\icon_agenda_telefono%402x.png">
+      <Link>Media.xcassets\icon_agenda_telefono.imageset\icon_agenda_telefono%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_agenda_telefono.imageset\icon_agenda_telefono%403x.png">
+      <Link>Media.xcassets\icon_agenda_telefono.imageset\icon_agenda_telefono%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Arrow_Back.imageset\Back%402x.png">
+      <Link>Media.xcassets\Arrow_Back.imageset\Back%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Arrow_Back.imageset\Back%403x.png">
+      <Link>Media.xcassets\Arrow_Back.imageset\Back%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Arrow_Down.imageset\Dropdown%402x.png">
+      <Link>Media.xcassets\Arrow_Down.imageset\Dropdown%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Arrow_Down.imageset\Dropdown%403x.png">
+      <Link>Media.xcassets\Arrow_Down.imageset\Dropdown%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Camera.imageset\numpadSpecialCopy%403x.png">
+      <Link>Media.xcassets\Camera.imageset\numpadSpecialCopy%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Camera.imageset\numpadSpecialCopy%402x.png">
+      <Link>Media.xcassets\Camera.imageset\numpadSpecialCopy%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Home.imageset\casa%403x-1.png">
+      <Link>Media.xcassets\Home.imageset\casa%403x-1.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Home.imageset\casa%402x-1.png">
+      <Link>Media.xcassets\Home.imageset\casa%402x-1.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Arrow_Forward.imageset\ForwardWebView%403x.png">
+      <Link>Media.xcassets\Arrow_Forward.imageset\ForwardWebView%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Arrow_Forward.imageset\ForwardWebView%402x.png">
+      <Link>Media.xcassets\Arrow_Forward.imageset\ForwardWebView%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\FinguerPrint.imageset\icon_fingerprintW%402x.png">
+      <Link>Media.xcassets\FinguerPrint.imageset\icon_fingerprintW%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\FinguerPrint.imageset\icon_fingerprintW%403x.png">
+      <Link>Media.xcassets\FinguerPrint.imageset\icon_fingerprintW%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Aspa.imageset\common - aspa light%402x.png">
+      <Link>Media.xcassets\Aspa.imageset\common - aspa light%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\Aspa.imageset\common - aspa light%403x.png">
+      <Link>Media.xcassets\Aspa.imageset\common - aspa light%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_mostrar_clave.imageset\mostrar clave%402x.png">
+      <Link>Media.xcassets\icon_mostrar_clave.imageset\mostrar clave%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_mostrar_clave.imageset\mostrar clave%403x.png">
+      <Link>Media.xcassets\icon_mostrar_clave.imageset\mostrar clave%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_ocultar_clave.imageset\ocultar clave%403x.png">
+      <Link>Media.xcassets\icon_ocultar_clave.imageset\ocultar clave%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Media.xcassets\icon_ocultar_clave.imageset\ocultar clave%402x.png">
+      <Link>Media.xcassets\icon_ocultar_clave.imageset\ocultar clave%402x.png</Link>
+    </ImageAsset>
+</ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Remove="Views\Login\LoginView.xib" />
+    <InterfaceDefinition Remove="Views\Login\OlvideContrasenaConfirmacionView.xib" />
+    <InterfaceDefinition Remove="Views\Login\OlvideContrasenaView.xib" />
+    <InterfaceDefinition Remove="Views\Home\HomeView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Common\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/llDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+           <Button
+                android:id="@+id/btCerrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/laf_icon_close_blue_light"
+                android:drawableTint="@color/white"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_gravity="end"
+                android:textAllCaps="false"
+                style="@style/laf_texto_blanco_14r"
+                local:MvxBind="Visibility Visibility(Dismissible);Text CerrarText; Click CerrarCommand"
+                tools:text="Cerrar"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_medium"
+                android:gravity="center"
+                android:background="@color/white">
+                <MusicRequests.Droid.CustomImageView
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    local:MvxBind="ImageSource Imagen; Visibility Visibility(Imagen)"/>
+                <MusicRequests.Droid.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    style="@style/laf_texto_negro_20m"
+                    android:gravity="center_horizontal"
+                    tools:text="¡Oficina seleccionada!"
+                    local:MvxBind="Visibility Visibility(Titulo);Text Titulo;Gravity AlinearTitulo"/>
+
+                <MusicRequests.Droid.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:gravity="center_horizontal"
+                    tools:text="Genial, has seleccionado la oficina 8192 DENIA como tu oficina habitual. Recuerda que si necesitas cambiarla tienes que hacerlo presencialmente."
+                    style="@style/laf_texto_negro_14r"
+                    local:MvxBind="Text Mensaje;Gravity AlinearTexto; Visibility InvertedVisibility(MensajeHtml)"/>
+                 <MusicRequests.Droid.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:gravity="center_horizontal"
+                    tools:text="Genial, has seleccionado la oficina 8192 DENIA como tu oficina habitual. Recuerda que si necesitas cambiarla tienes que hacerlo presencialmente."
+                    style="@style/laf_texto_negro_14r"
+                    local:MvxBind="HtmlText Mensaje;Gravity AlinearTexto; Visibility Visibility(MensajeHtml)"/>
+                <MusicRequests.Droid.CustomViews.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:imeOptions="actionSend"
+                    style="@style/laf_edit_text_transparent_black_rect"
+                    android:maxLines="1"
+                    local:MvxBind="Hint HintTextoInput; Text TextoInput; Visibility Visibility(HintTextoInput);"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_medium_extra"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    local:MvxBind="Visibility InvertedVisibility(BotonesVertical)">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        local:MvxBind="Visibility Visibility(OkPequeño)">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            style="@style/laf_botonCuadrado_azul_12m"
+                            tools:text="Continuar"
+                            android:textSize="14sp"
+                            local:MvxBind="Text OkText; Click OKCommand"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="left"
+                        style="@style/laf_botonCuadrado_transparenteNegro_12m"
+                        android:textSize="14sp"
+                        tools:text="Cancelar"
+                        local:MvxBind="Visibility Visibility(CancelText);Text CancelText; Click CancelCommand"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        style="@style/laf_botonCuadrado_azul_12m"
+                        tools:text="Continuar"
+                        android:textSize="14sp"
+                        local:MvxBind="Visibility And(!OkPequeño, !HintTextoInput), Converter= Visibility;Text OkText; Click OKCommand"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        style="@style/laf_botonCuadrado_azul_12m"
+                        tools:text="Continuar"
+                        android:textSize="14sp"
+                        local:MvxBind="Text OkText; Visibility Visibility(HintTextoInput); Click ObjectToCommandParameter(OKPromptCommand, .)"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_medium_extra"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:orientation="vertical"
+                    local:MvxBind="Visibility Visibility(BotonesVertical)">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/laf_botonCuadrado_azul_12m"
+                        tools:text="Continuar"
+                        android:textSize="14sp"
+                        local:MvxBind="Text OkText; Click OKCommand"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

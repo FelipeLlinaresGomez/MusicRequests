@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Music Requests</string>
+    <string name="ic_loading_label">Cargando</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="ApplicationName">Music Requests</string>
+    <string name="Hello">Music Requests</string>
+    <string name="ceca_hce_service_description">Music Requests</string>
+    <string name="ceca_hce_aid_description">Music Requests AIDs</string>
+    <string name="ceca_hce_direct_payment_needed">Debe desbloquear el terminal para realizar Pagos.</string>
+    <string name="ceca_hce_not_secured_cant_pay">Por motivos de seguridad es necesario contar con un sistema de bloqueo de pantalla para realizar pagos desde fuera de la App.\nPuedes pagar entrando en la App o desde fuera estableciendo un sistema de bloqueo (pin, patrón,huella etc.)</string>
+    <string name="enviar_bizum_short">Enviar Bizum</string>
+    <string name="enviar_bizum_long">Enviar Bizum</string>
+    <string name="enviar_bizum_disabled">Enviar Bizum</string>
+    <string name="solicitar_bizum_short">Pedir Bizum</string>
+    <string name="solicitar_bizum_long">Pedir Bizum</string>
+    <string name="solicitar_bizum_disabled">Pedir Bizum</string>
+    <string name="ultimos_movimientos_short">Última Actividad</string>
+    <string name="ultimos_movimientos_long">Última Actividad</string>
+    <string name="ultimos_movimientos_disabled">Última Actividad</string>
+
+    <!-- Voice assitant -->
+    <string name="accesibilidad_agenda">Acceso agenda</string>
+
+    
+</resources>

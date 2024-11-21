@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Google.Android.Material.AppBar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stateListAnimator="@null"                                            
+    local:MvxBind="Visibility MostrarToolbarSuperior, Converter = Visibility">
+    <AndroidX.AppCompat.Widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <MusicRequests.Droid.CustomTextView
+                android:id="@+id/tvToolBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxLines="2"
+                android:ellipsize="end"            
+                local:MvxBind="Text Title;" />
+            <ImageView
+                android:id="@+id/tvToolBarLogo"
+                android:layout_width="200dp"
+                android:layout_height="32dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_white" />
+        </RelativeLayout>
+    </AndroidX.AppCompat.Widget.Toolbar>
+</Google.Android.Material.AppBar.AppBarLayout>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loadingViewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/toolbar_shadow_fix"
+    android:background="@color/transparent"
+    android:clickable="true"
+    local:MvxBind="Visibility IsBusy, Converter = Visibility">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ltVamos"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tvLoadingMessage"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        local:lottie_autoPlay="false"
+        local:lottie_rawRes="@raw/lottie_vamos"
+        local:lottie_loop="false"/>
+    <MusicRequests.Droid.CustomTextView
+        android:id="@+id/tvLoadingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        local:MvxBind="Text CargandoStr"
+        local:customFont="musicRequestsMedium" />
+<!--</LinearLayout>-->
+</RelativeLayout>

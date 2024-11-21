@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<declare-styleable name="CustomFont">
+		<attr name="customFont">
+			<enum name="musicRequestsBold" value="1" />
+			<enum name="musicRequestsItalic" value="2"/>
+			<enum name="musicRequestsExtraBold" value="3"/>
+			<enum name="musicRequestsMedium" value="4" />
+			<enum name="musicRequestsRegular" value="5" />
+		</attr>
+	</declare-styleable>
+</resources>
+

@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Standard dimensions -->
+  <dimen name="margin_super_tiny">4dp</dimen>
+  <dimen name="margin_tinier">7dp</dimen>
+  <dimen name="margin_tiny">9dp</dimen>
+  <dimen name="margin_small">12dp</dimen>
+  <dimen name="margin_small_new">8dp</dimen>
+  <dimen name="margin_small_medium">15dp</dimen>
+  <dimen name="margin_medium_new">16dp</dimen>
+  <dimen name="margin_medium">18dp</dimen>
+  <dimen name="margin_medium_extra">24dp</dimen>
+  <dimen name="margin_2xmedium_new">30dp</dimen>
+  <dimen name="margin_2xmedium">36dp</dimen>
+  <dimen name="margin_large">27dp</dimen>
+  <dimen name="margin_larger">50dp</dimen>
+  <dimen name="margin_largest">64dp</dimen> 
+
+	
+    <dimen name="navigation_drawer_width">290dp</dimen>
+
+    <!-- font definitions -->
+
+    <dimen name="text_tinier">10sp</dimen>
+    <dimen name="text_tiny">13sp</dimen>
+    <dimen name="text_timy_small">14sp</dimen>
+
+    <dimen name="text_small">15sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+	<dimen name="text_medium_big">20sp</dimen>
+	<dimen name="text_medium_extra">24sp</dimen>
+    <dimen name="text_big">30sp</dimen>
+	<dimen name="text_extra_big">32sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+	<dimen name="text_extra_large">44sp</dimen>
+    <!--<dimen name="text_huge">17sp</dimen>-->
+    <dimen name="text_very_huge">56sp</dimen>
+  
+    <!--public home-->
+    <dimen name="main_view_pager_height">230dp</dimen>
+
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_circle_indicator_radius">4dp</dimen>
+
+    <dimen name="navigation_drawer_item_height">48dp</dimen>
+
+    <dimen name="navigation_item_icon_radius">38dp</dimen>
+	<dimen name="big_round_circle_diameter">56dp</dimen>
+
+	<dimen name="red_badge_diameter">18dp</dimen>
+
+    <dimen name="border_rect_width">0.8dp</dimen>
+     <dimen name="border_rect_width_fix">-0.8dp</dimen>
+
+    <dimen name="btn_operar_width">68dp</dimen>
+	<dimen name="btn_operar_height">46dp</dimen>
+
+	<dimen name="toolbar_shadow_fix">-4dp</dimen>
+
+    <dimen name="btn_height">48dp</dimen>
+
+
+</resources>

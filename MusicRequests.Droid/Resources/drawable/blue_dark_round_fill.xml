@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+  <solid android:color="@color/ic_blue_button_pressed" />
+  <stroke android:width="@dimen/border_rect_width" android:color="@color/ic_blue_button_pressed" />
+  <corners android:radius="6dip"/>
+  <padding android:left="@dimen/margin_small" android:right="@dimen/margin_small" android:top="@dimen/margin_small" android:bottom="@dimen/margin_small"/>
+</shape>
+

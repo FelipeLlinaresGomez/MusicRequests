@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loadingViewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/toolbar_shadow_fix"
+    android:background="@color/transparent"
+    android:clickable="true"
+    local:MvxBind="Visibility IsBusy, Converter = Visibility">
+<!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">-->
+<!--<ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true" />-->
+    <MusicRequests.Droid.WhiteLoadingView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvLoadingMessage"
+        android:layout_centerHorizontal="true" />
+    <MusicRequests.Droid.CustomTextView
+        android:id="@+id/tvLoadingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_centerInParent="true"
+        android:textColor="@color/ic_gris4"
+        android:text="Hola"
+        local:MvxBind="Text CargandoStr"
+        local:customFont="musicRequestsMedium" />
+<!--</LinearLayout>-->
+</RelativeLayout>

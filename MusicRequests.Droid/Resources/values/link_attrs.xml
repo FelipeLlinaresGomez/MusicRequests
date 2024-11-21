@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LinkView">
+        <attr name="android:text"/>
+        <attr name="android:drawable"/>            
+        <attr name="showRightArrow" format="boolean" />
+		<attr name="hasDisplayNumber" format="boolean"/>
+		<attr name="titleStyle" format="reference" />
+		<attr name="descStyle" format="reference" />
+    </declare-styleable>
+</resources>
+

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "945641375266",
+    "firebase_url": "https://MusicRequestpayms.firebaseio.com",
+    "project_id": "MusicRequestpayms",
+    "storage_bucket": "MusicRequestpayms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945641375266:android:b8918bf35d738a66",
+        "android_client_info": {
+          "package_name": ""
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945641375266-epa4ibjtcugjaobl9o8fmsd8uthn70ds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrwP3BqGe0A2Aml-nZoMM-7b9JOFyl6rI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

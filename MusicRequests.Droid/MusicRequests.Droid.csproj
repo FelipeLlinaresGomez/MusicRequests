@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateApplicationManifest>false</GenerateApplicationManifest>
+		<AndroidManifest>AndroidManifest.xml</AndroidManifest>
+		<Configurations>Debug;Release;Store</Configurations>
+		<BuildWithMSBuildOnMono>false</BuildWithMSBuildOnMono>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<WarningLevel>4</WarningLevel>
+		<DocumentationFile>
+		</DocumentationFile>
+		<LangVersion>10.0</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<LangVersion>10.0</LangVersion>
+		<GenerateApplicationManifest>false</GenerateApplicationManifest>
+		<AndroidManifest>AndroidManifest.xml</AndroidManifest>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+		<AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
+		<DebugSymbols>true</DebugSymbols>
+		<WarningLevel>4</WarningLevel>
+		<DocumentationFile>
+		</DocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MusicRequests.Core.Models\MusicRequests.Core.Models.csproj" />
+		<ProjectReference Include="..\MusicRequests.Core.Services\MusicRequests.Core.Services.csproj" />
+		<ProjectReference Include="..\MusicRequests.Core\MusicRequests.Core.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Core" Version="1.12.0.4">
+		</PackageReference>
+		<PackageReference Include="Acr.UserDialogs" Version="8.0.1">
+		</PackageReference>
+		<PackageReference Include="MvvmCross" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="MvvmCross.Plugin.Json" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="MvvmCross.Plugin.Messenger" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="MvvmCross.Plugin.ResourceLoader" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="MvvmCross.Plugin.JsonLocalization" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="MvvmCross.Plugin.Visibility" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3">
+		</PackageReference>
+		<PackageReference Include="Plugin.CurrentActivity" Version="2.1.0.4">
+		</PackageReference>
+		<PackageReference Include="Refractored.Controls.CircleImageView" Version="1.0.1">
+		</PackageReference>
+		<PackageReference Include="Square.OkHttp" Version="2.7.5">
+		</PackageReference>
+		<PackageReference Include="Square.OkHttp3" Version="3.12.6">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.10">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Browser" Version="1.8.0">
+		</PackageReference>
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.10.0.3">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.7.0">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.23">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.23">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.7.0.1">
+		</PackageReference>
+		<PackageReference Include="Com.Indigitall.Xamarin" Version="3.2.2">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7">
+		</PackageReference>
+		<PackageReference Include="Serilog" Version="2.12.0">
+		</PackageReference>
+		<PackageReference Include="Serilog.Sinks.Xamarin" Version="1.0.0">
+		</PackageReference>
+		<PackageReference Include="MvvmCross.DroidX.RecyclerView" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="MvvmCross.DroidX.SwipeRefreshLayout" Version="9.2.0">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.1.4">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.3.2.2">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Biometric" Version="1.1.0.19">
+		</PackageReference>
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.9.23">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.ViewPager" Version="1.0.0.23">
+		</PackageReference>
+		<PackageReference Include="Xamarin.Google.Dagger" Version="2.39.1">
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" Version="1.6.2.2" />
+		<PackageReference Include="ZXing.Net" Version="0.16.9" />
+		<PackageReference Include="Xamarin.AndroidX.Collection" Version="1.4.0.2" />
+		<PackageReference Include="Ibercaja.Lottie.Android" Version="6.4.1.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Notifications\google-services.json" />
+		<None Remove="Resources\drawable\icon_phone.xml" />
+		<None Remove="Resources\drawable\ic_info_nodata.xml" />
+		<None Remove="Resources\drawable\laf_icon_error_conexion.xml" />
+		<None Remove="Resources\drawable\orange_border_orange_filled_rect.xml" />
+		<None Remove="Resources\layout\bizum_id_detalle_comercio_item_view.xml" />
+		<None Remove="Resources\layout\bizum_id_registro_popup_item_view.xml" />
+		<None Remove="Resources\layout\gestion_suscripcion_rechazar_pago_firma_fragment.xml" />
+		<None Remove="Resources\layout\gestion_suscripcion_rechazar_pago_popup_view.xml" />
+		<None Remove="Resources\layout\login_aviso_disponibilidad_activity.xml" />
+		<None Remove="Services\DeviceSecurityCheck\" />
+		<None Remove="Assets\TextResources\" />
+	</ItemGroup>
+	<ItemGroup>
+		<GoogleServicesJson Include="Notifications\google-services.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Services\DeviceSecurityCheck\" />
+	  <Folder Include="Assets\TextResources\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <AndroidAsset Include="..\MusicRequests.Core\TextResources\Text\LoginViewModel.json">
+	    <Link>Assets\TextResources\Text\LoginViewModel.json</Link>
+	  </AndroidAsset>
+	  <AndroidAsset Include="..\MusicRequests.Core\TextResources\Text\Shared.json">
+	    <Link>Assets\TextResources\Text\Shared.json</Link>
+	  </AndroidAsset>
+	  <AndroidAsset Include="..\MusicRequests.Core\TextResources\Text\HomeViewModel.json">
+	    <Link>Assets\TextResources\Text\HomeViewModel.json</Link>
+	  </AndroidAsset>
+	</ItemGroup>
+</Project>
